@@ -1,19 +1,13 @@
-def find_neq_number(K):
-    count = 0
-    num = 0
-    
-    while True:
-        num += 1
-        if '11' in str(num):
-            continue
-        count += 1
-        if count == K:
-            return num
+# リストの作成
+my_list = [3, 1, 4, 1, 5, 9, 2, 6, 5]
 
-# テストケースの数
-T = int(input())
-K = [int(input()) for _ in range(T)]
+# 最小値の取得
+min_value = min(my_list)
 
-for i in range(T):
-    print(find_neq_number(K[i]))
+# 最小値の位置（インデックス）の取得
+min_index = my_list.index(min_value)
+
+# 結果の表示
+print("最小値:", min_value)
+print("最小値の位置:", min_index)
 
